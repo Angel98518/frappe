@@ -54,7 +54,7 @@ frappe.ui.form.on("DocType", {
 				? __("Go to {0}", [__(frm.doc.name)])
 				: __("Go to {0} List", [__(frm.doc.name)]);
 			frm.add_custom_button(button_text, () => {
-				window.open(`/desk/${frappe.router.slug(frm.doc.name)}`);
+				window.open(`/desk/${frappe.router.slug(frm.doc.name, "-")}`);
 			});
 		}
 
